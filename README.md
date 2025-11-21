@@ -7,7 +7,7 @@ This is a functional Todo List application built with vanilla HTML, CSS, and Jav
 
 Inspiration & Source:
 
-This project was originally based on the tutorial "Build a Todo List App with HTML, CSS & JavaScript" by Smyk.
+This project was originally based on the tutorial "Build a Todo List App with HTML, CSS & JavaScript".
 
 📺 Watch the original tutorial here: https://www.youtube.com/watch?v=OulQ9W2s6Z0
 
