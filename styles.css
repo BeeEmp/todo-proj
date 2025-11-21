@@ -1,0 +1,164 @@
+/* 1. colors & defaults */
+:root {
+    --primary-color: #6c5ce7;
+    --bg-color: #dfe6e9;     
+    --frame-bg: #ffffff;      
+    --text-dark: #2d3436;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* list body containter  */
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background-color: var(--bg-color); /* Adds Page Color */
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center; /* horizontally */
+
+    align-items: flex-start;   /* change to center for vertically */
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+/* this wraps the app */
+.app-wrapper {
+    background-color: var(--frame-bg);
+    width: 100%;
+    max-width: 450px;  /* Constrains the width so it looks like a card */
+    padding: 30px;     /* Space inside the frame */
+    border-radius: var(--border-radius); /* Rounded corners */
+    
+    /* This adds the shadow/depth */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Typography, headings*/
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 800; /* this makes it bold */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+hr {
+    /*  removes default 3D border */
+    border: none; 
+    
+    /*  dashed line */
+    border-top: 2px dashed var(--primary-color); 
+    
+    /* space around */
+    margin: 20px 0; 
+    
+    /* opactity for the looks */
+    opacity: 0.6; 
+}
+
+/* FORM STYLING */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form textarea {
+    resize: none;
+    min-height: 80px;
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #b2bec3;
+    border-radius: 8px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* The Add Button */
+.addBtn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700; /* Bold text */
+    font-family: 'Montserrat', sans-serif;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.addBtn:hover {
+    opacity: 0.9;
+}
+
+.addBtn:active {
+    transform: scale(0.98);
+}
+
+/* TODO ITEMS */
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.todo {
+    display: flex;
+    align-items: center; /* Aligns? */
+    padding: 12px;
+    background: #f5f6fa; /* different color for items */
+    border-left: 4px solid var(--primary-color); /* colored strip on left */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.todo p {
+    flex: 1; /* Pushes the buttons to the far right */
+    font-weight: 500; /* Slightly bold text */
+    word-break: break-all; /* Prevents long words breaking layout */
+}
+
+.BtnContainer {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.iconBtn {
+    background: white;
+    border: 1px solid #dfe6e9;
+    color: var(--text-dark);
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    transition: all 0.2s;
+}
+
+/* Specific colors for *buttons* */
+.fa-pen-to-square { color: #303bd6; }
+.fa-delete-left { color: #303bd6; }
+
+.iconBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
